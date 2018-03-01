@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { createStore} from "redux";
 import './App.css';
+import store from "./store"
 
 class App extends Component {
   render() {
@@ -19,33 +19,6 @@ class App extends Component {
   }
 }
 
-
-const initialState = {
-  result: 1,
-  history: []
-}
-
-
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "ADD":
-      state = {
-          ...state,
-          result: state.result + action.payload,
-          history: [...state.lastValues, action]
-      };
-      break;
-
-  }
-  return state;
-}
-
-const store = createStore(
-    reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-
-
 store.dispatch({
   type: "ADD",
   payload: 100
@@ -60,20 +33,4 @@ store.dispatch({
   type: "ADD",
   payload: 100
 })
-
-store.dispatch({
-  type: "ADD",
-  payload: 100
-})
-
-store.dispatch({
-  type: "ADD",
-  payload: 100
-})
-
-store.dispatch({
-  type: "ADD",
-  payload: 100
-})
-
 export default App;
