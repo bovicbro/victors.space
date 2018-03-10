@@ -4,6 +4,11 @@ const personActions = {
     type: "ADD_PERSON",
     payload: person
     }
+  },
+  removePerson: () => {
+    return {
+      type: "REMOVE_PERSON",
+    }
   }
 }
 console.log(personActions.addPerson("HEJEHEJE"));

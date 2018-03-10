@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Button from "./Button"
 
 export default class ListItem extends React.Component {
   constructor() {
@@ -6,7 +7,7 @@ export default class ListItem extends React.Component {
   } render() {
     return(
       <li>
-        {this.props.item}
+        {this.props.item} <Button buttonAction={() => {}}/>
       </li>
     )
   }

@@ -6,6 +6,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import Button from "./Button"
 import List from "./List"
+import NameForm from "./NameForm"
 import personActions from "../actions/personActions"
 
 class App extends Component {
@@ -19,6 +20,8 @@ class App extends Component {
         <List listItems={this.props.person.personList} />
         <Footer name={this.props.math.result + "  " + this.props.name.name} />
         <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList("Jessica Alba")} />
+        <NameForm submitAction={(name) => this.props.addPersonToList(name)}/>
+        <Button buttonText="pop" buttonAction={() => this.props.removePerson()} />
       </div>
     );
   }
@@ -54,6 +57,7 @@ const mapDispatchToProps = (dispatch) => {
       });
     },
     addPersonToList: (person) => {dispatch(personActions.addPerson(person))},
+    removePerson: () => {dispatch(personActions.removePerson())},
   }
   };
 

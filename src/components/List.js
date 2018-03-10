@@ -9,7 +9,7 @@ export default class List extends React.Component {
       <div>
         <ul>
           {this.props.listItems.map(function(listValue) {
-            return <ListItem item={listValue} />
+            return <ListItem item={listValue} popItem={() => this.props.popItem()} />
           })}
         </ul>
       </div>
