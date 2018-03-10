@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-      <Layout result={this.props.math.result} />
+      <Layout  />
       </div>
     );
   }
