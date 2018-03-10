@@ -4,14 +4,19 @@ const mathReducer = (state = {
 }, action) => {
   switch (action.type) {
     case "ADD":
+    console.log("Math reducer is alive and kicking");
       state = {
           ...state,
           result: state.result + action.payload,
           lastValues: [...state.lastValues, state.result]
       };
       break;
-    case "DELETE":
-// something
+    case "SUBTRACT":
+state = {
+          ...state,
+          result: state.result - action.payload,
+          lastValues: [...state.lastValues, state.result]
+      };
       break;
   }
   return state;

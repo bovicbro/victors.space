@@ -12,18 +12,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'));
 registerServiceWorker();
-
-store.dispatch({
-  type: "ADD",
-  payload: 100
-})
-
-store.dispatch({
-  type: "ADD",
-  payload: 100
-})
-
-store.dispatch({
-  type: "ADD",
-  payload: 100
-})

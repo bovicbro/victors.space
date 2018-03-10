@@ -4,6 +4,7 @@ const nameReducer = (state = {
 }, action) => {
   switch (action.type) {
     case "CHANGE_NAME":
+      console.log("Name reducer is alive and kicking");
       state = {
           ...state,
           name: action.payload,
