@@ -5,6 +5,8 @@ import {connect} from "react-redux";
 import Header from "./Header"
 import Footer from "./Footer"
 import Button from "./Button"
+import List from "./List"
+import personActions from "../actions/personActions"
 
 class App extends Component {
   render() {
@@ -14,6 +16,7 @@ class App extends Component {
         <Button buttonText="+" buttonAction={() => this.props.addOne()} />
         <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
         <Button buttonText="Change name to Johannes" buttonAction={() => this.props.changeName("Johannes")} />
+        <List listItems={this.props.person.personList} />
         <Footer name={this.props.math.result + "  " + this.props.name.name} />
       </div>
     );
@@ -23,7 +26,8 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     math: state.math,
-    name: state.name
+    name: state.name,
+    person: state.person
   };
 };
 
@@ -48,7 +52,8 @@ const mapDispatchToProps = (dispatch) => {
         type: "CHANGE_NAME",
         payload: name
       });
-    }
+    },
+    addPersonToList: (person) => {dispatch(personActions.addPerson(person))},
   }
   };
 
