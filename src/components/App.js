@@ -15,9 +15,10 @@ class App extends Component {
         <Header />
         <Button buttonText="+" buttonAction={() => this.props.addOne()} />
         <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
-        <Button buttonText="Change name to Johannes" buttonAction={() => this.props.changeName("Johannes")} />
+        <Button buttonText="JoNe" buttonAction={() => this.props.changeName("Johannes")} />
         <List listItems={this.props.person.personList} />
         <Footer name={this.props.math.result + "  " + this.props.name.name} />
+        <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList("Jessica Alba")} />
       </div>
     );
   }
@@ -47,7 +48,6 @@ const mapDispatchToProps = (dispatch) => {
     },
 
     changeName: (name) => {
-      console.log("dispatch line: " + name);
       dispatch({
         type: "CHANGE_NAME",
         payload: name

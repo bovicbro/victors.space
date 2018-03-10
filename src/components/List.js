@@ -8,9 +8,9 @@ export default class List extends React.Component {
     return(
       <div>
         <ul>
-          <ListItem item={this.props.listItems[0]} />
-          <ListItem item={this.props.listItems[1]} />
-          <ListItem item={this.props.listItems[2]} />
+          {this.props.listItems.map(function(listValue) {
+            return <ListItem item={listValue} />
+          })}
         </ul>
       </div>
     )

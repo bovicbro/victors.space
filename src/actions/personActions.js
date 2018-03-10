@@ -6,5 +6,6 @@ const personActions = {
     }
   }
 }
+console.log(personActions.addPerson("HEJEHEJE"));
 
 export default personActions;
