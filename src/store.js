@@ -4,7 +4,7 @@ import nameReducer from "./reducers/nameReducer"
 
 export default createStore(
     combineReducers({
-      mathReducer: mathReducer,
-      nameReducer: nameReducer}),
+      math: mathReducer,
+      name: nameReducer}),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

@@ -3,7 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
-import {provider} from "react-redux"
+import {Provider} from "react-redux"
+import store from "./store"
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider state={store} >
+  <App />
+  </Provider>,
+  document.getElementById('root'));
 registerServiceWorker();
+
+store.dispatch({
+  type: "ADD",
+  payload: 100
+})
+
+store.dispatch({
+  type: "ADD",
+  payload: 100
+})
+
+store.dispatch({
+  type: "ADD",
+  payload: 100
+})

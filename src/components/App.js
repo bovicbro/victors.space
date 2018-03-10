@@ -7,8 +7,15 @@ export default class App extends Component {
   render() {
     return (
       <div>
-      <Layout />
+      <Layout result={this.props.math.result} />
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+  math: state.math,
+  user: state.user
+};
+};
