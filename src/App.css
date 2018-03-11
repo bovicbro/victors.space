@@ -1,4 +1,5 @@
 .App {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -37,6 +38,28 @@
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
 }
 
+.header {
+  display:grid;
+  text-align: center;
+  letter-spacing: 5px;
+  background:#E8A724;
+  padding: 10px;
+}
+
+.inputs {
+  text-align: center;
+  display: grid;
+  padding: 30px;
+}
+
+.footer {
+  display: grid;
+  text-align: center;
+  letter-spacing: 5px;
+  background:#FF801B;
+  padding: 10px;
+}
+
 /* Add some padding inside the card container */
 .cardContainer {
     padding: 2px 16px;
@@ -46,6 +69,7 @@
 img {
   width: 100%;
 }
+
 .mainContainer {
   width: 60%;
   margin: 0 auto;

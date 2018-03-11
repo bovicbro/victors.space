@@ -7,8 +7,9 @@ export default class Footer extends React.Component {
   }
   render() {
     return (
-      <footer>
-        <h1>footer and the name is: {this.props.name}</h1>
+      <footer class="footer">
+        <h1>{this.props.math}</h1>
+        <h1>{this.props.name}</h1>
       </footer>
     )
   }

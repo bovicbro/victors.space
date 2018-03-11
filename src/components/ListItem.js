@@ -10,7 +10,7 @@ export default class ListItem extends React.Component {
         <div class="card">
           <img src={this.props.image}></img>
           <div class="cardContainer">
-          {this.props.item} <Button buttonAction={() => {}}/>
+          {this.props.item} <Button buttonText="rm" buttonAction={() => {}}/>
           </div>
       </div>
       </li>

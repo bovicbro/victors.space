@@ -18,15 +18,21 @@ class App extends Component {
   render() {
     return (
       <div class="mainContainer">
-        <Header />
-        <Button buttonText="+" buttonAction={() => this.props.addOne()} />
-        <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
-        <Button buttonText="JoNe" buttonAction={() => this.props.changeName("Johannes")} />
-        <Footer name={this.props.math.result + "  " + this.props.name.name} />
-        <List listItems={this.props.person.personList} />
-        <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} />
-        <NameForm img={avatar} submitAction={(person) => this.props.addPersonToList(person)}/>
-        <Button buttonText="pop" buttonAction={() => this.props.removePerson()} />
+        <Header title="Plebbook" />
+        <body>
+          <div class="inputs">
+            <Button buttonText="+" buttonAction={() => this.props.addOne()} />
+            <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
+            <Button buttonText="JoNe" buttonAction={() => this.props.changeName("Johannes")} />
+            <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} />
+            <Button buttonText="pop" buttonAction={() => this.props.removePerson()} />
+            <NameForm img={avatar} submitAction={(person) => this.props.addPersonToList(person)}/>
+          </div>
+          <div class="outputs">
+            <List listItems={this.props.person.personList} />
+          </div>
+        </body>
+        <Footer name={this.props.name.name} math={this.props.math.result} />
       </div>
     );
   }
@@ -48,6 +54,6 @@ const mapDispatchToProps = (dispatch) => {
     addPersonToList: (person) => {dispatch(personActions.addPerson(person))},
     removePerson: () => {dispatch(personActions.removePerson())},
   }
-  };
+};
 
-  export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
