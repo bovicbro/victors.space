@@ -2,7 +2,10 @@ const personActions = {
   addPerson : (person) => {
     return {
     type: "ADD_PERSON",
-    payload: person
+    payload: {
+      name: person.name,
+      img: person.img
+    }
     }
   },
   removePerson: () => {
@@ -11,6 +14,5 @@ const personActions = {
     }
   }
 }
-console.log(personActions.addPerson("HEJEHEJE"));
 
 export default personActions;

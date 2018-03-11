@@ -9,6 +9,10 @@ import List from "./List"
 import NameForm from "./NameForm"
 import personActions from "../actions/personActions"
 
+const avatar = require('../img_avatar.png')
+const alba = require('../alba.jpg')
+
+
 class App extends Component {
   render() {
     return (
@@ -19,8 +23,8 @@ class App extends Component {
         <Button buttonText="JoNe" buttonAction={() => this.props.changeName("Johannes")} />
         <Footer name={this.props.math.result + "  " + this.props.name.name} />
         <List listItems={this.props.person.personList} />
-        <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList("Jessica Alba")} />
-        <NameForm submitAction={(name) => this.props.addPersonToList(name)}/>
+        <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} />
+        <NameForm img={avatar} submitAction={(person) => this.props.addPersonToList(person)}/>
         <Button buttonText="pop" buttonAction={() => this.props.removePerson()} />
       </div>
     );

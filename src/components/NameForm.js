@@ -15,7 +15,7 @@ class NameForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.submitAction(this.state.value);
+    this.props.submitAction({name: this.state.value, img: this.props.img});
   }
 
   render() {

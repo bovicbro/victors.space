@@ -9,7 +9,9 @@ export default class List extends React.Component {
       <div>
         <ul>
           {this.props.listItems.map(function(listValue) {
-            return <ListItem item={listValue} image={require("../img_avatar.png" )}popItem={() => this.props.popItem()} />
+            return <ListItem item={listValue.name}
+              image={listValue.img}
+              popItem={() => this.props.popItem()} />
           })}
         </ul>
       </div>
