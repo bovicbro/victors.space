@@ -12,13 +12,13 @@ import personActions from "../actions/personActions"
 class App extends Component {
   render() {
     return (
-      <div>
+      <div class="mainContainer">
         <Header />
         <Button buttonText="+" buttonAction={() => this.props.addOne()} />
         <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
         <Button buttonText="JoNe" buttonAction={() => this.props.changeName("Johannes")} />
-        <List listItems={this.props.person.personList} />
         <Footer name={this.props.math.result + "  " + this.props.name.name} />
+        <List listItems={this.props.person.personList} />
         <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList("Jessica Alba")} />
         <NameForm submitAction={(name) => this.props.addPersonToList(name)}/>
         <Button buttonText="pop" buttonAction={() => this.props.removePerson()} />

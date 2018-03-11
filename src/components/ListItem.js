@@ -7,7 +7,12 @@ export default class ListItem extends React.Component {
   } render() {
     return(
       <li>
-        {this.props.item} <Button buttonAction={() => {}}/>
+        <div class="card">
+          <img src={this.props.image}></img>
+          <div class="cardContainer">
+          {this.props.item} <Button buttonAction={() => {}}/>
+          </div>
+      </div>
       </li>
     )
   }
