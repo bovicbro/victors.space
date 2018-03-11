@@ -8,6 +8,7 @@ import Button from "./Button"
 import List from "./List"
 import NameForm from "./NameForm"
 import personActions from "../actions/personActions"
+import mathAction from "../actions/mathAction"
 
 const avatar = require('../img_avatar.png')
 const alba = require('../alba.jpg')
@@ -41,25 +42,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addOne: () => {
-      dispatch({
-        type: "ADD",
-        payload: 1
-      });
-    },
-    subtractOne: () => {
-      dispatch({
-        type: "SUBTRACT",
-        payload: 1
-      });
-    },
-
-    changeName: (name) => {
-      dispatch({
-        type: "CHANGE_NAME",
-        payload: name
-      });
-    },
+    changeName: (name) => {dispatch(personActions.changeName(name))},
+    addOne: () => {dispatch(mathAction.addOne())},
+    subtractOne: () => {dispatch(mathAction.subtractOne())},
     addPersonToList: (person) => {dispatch(personActions.addPerson(person))},
     removePerson: () => {dispatch(personActions.removePerson())},
   }

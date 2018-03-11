@@ -12,7 +12,14 @@ const personActions = {
     return {
       type: "REMOVE_PERSON",
     }
+  },
+  changeName: (name) => {
+    return {
+      type: "CHANGE_NAME",
+      payload: name
+    }
   }
+
 }
 
 export default personActions;

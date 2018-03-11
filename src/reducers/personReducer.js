@@ -14,9 +14,11 @@ const personReducer = (state = {
     break;
 
     case "REMOVE_PERSON":
+    console.log("removing person");
+    state.personList.pop();
     state = {
       ...state,
-      personList: state.personList.pop(),
+      personList: state.personList,
     }
     break;
 
