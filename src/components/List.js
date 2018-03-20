@@ -7,7 +7,7 @@ export default class List extends React.Component {
   } render() {
     return(
       <div>
-        <ul>
+        <ul class="gridContainer">
           {this.props.listItems.map(function(listValue) {
             return <ListItem item={listValue.name}
               image={listValue.img}
