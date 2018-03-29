@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
-import '../App.css';
+import '../static/App.css';
 import {connect} from "react-redux";
 import Header from "./Header"
 import Footer from "./Footer"
@@ -19,8 +19,7 @@ class App extends Component {
     return (
       <div class="mainContainer">
         <Header title="Plebbook" />
-        <body>
-          <div class="inputs">
+          <div class="buttonMenu">
             <Button buttonText="+" buttonAction={() => this.props.addOne()} />
             <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
             <Button buttonText="JoNe" buttonAction={() => this.props.changeName("Johannes")} />
@@ -28,10 +27,9 @@ class App extends Component {
             <Button buttonText="pop" buttonAction={() => this.props.removePerson()} />
             <NameForm img={avatar} submitAction={(person) => this.props.addPersonToList(person)}/>
           </div>
-          <div class="outputs">
+          <div class="cardArea">
             <List listItems={this.props.person.personList} />
           </div>
-        </body>
         <Footer name={this.props.name.name} math={this.props.math.result} />
       </div>
     );
