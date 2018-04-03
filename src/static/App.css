@@ -62,7 +62,8 @@
 
 .gridContainer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  grid-gap: 10px;
 }
 
 
@@ -78,7 +79,7 @@ img {
 }
 
 .mainContainer {
-  width: 60%;
+  width: 80vw;
   margin: 0 auto;
   display: grid;
   grid-gap: 10px;
