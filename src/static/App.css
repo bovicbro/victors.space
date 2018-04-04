@@ -56,10 +56,14 @@
   background:#FF801B;
   padding: 10px;
 }
+@media only screen and (max-width: 525px){
 
 .buttonMenu {
+  grid-column: 1 / 3;
+  text-align: center;
 }
 
+}
 .gridContainer{
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
@@ -84,8 +88,4 @@ img {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 3fr;
-}
-
-div{
-  padding: 10px;
 }
