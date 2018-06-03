@@ -51,6 +51,7 @@ const mapDispatchToProps = (dispatch) => {
     subtractOne: () => {dispatch(mathAction.subtractOne())},
     addPersonToList: (person) => {dispatch(personActions.addPerson(person))},
     removePerson: () => {dispatch(personActions.removePerson())},
+    removePersonByIndex: (index) => {dispatch(personActions.removePersonByIndex(index))}
   }
 };
 

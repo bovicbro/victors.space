@@ -21,6 +21,15 @@ const personReducer = (state = {
     }
     break;
 
+    case "REMOVE_PERSON_BY_INDEX":
+    state.personList.splice(action.payload,1);
+    state = {
+      ...state,
+      personList: state.personList,
+    }
+      break;
+
+
     default:
     break;
 

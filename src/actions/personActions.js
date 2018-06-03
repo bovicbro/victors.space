@@ -18,6 +18,12 @@ const personActions = {
       type: "CHANGE_NAME",
       payload: name
     }
+  },
+  removePersonByIndex: (index) => {
+    return {
+      type: "REMOVE_PERSON_BY_INDEX",
+      payload: index
+    };
   }
 
 }
