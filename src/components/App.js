@@ -28,7 +28,7 @@ class App extends Component {
             <NameForm img={avatar} submitAction={(person) => this.props.addPersonToList(person)}/>
           </div>
           <div class="cardArea">
-            <List listItems={this.props.person.personList} />
+            <List listItems={this.props.person.personList} removePersonByIndex={this.props.removePersonByIndex} />
           </div>
         <Footer name={this.props.name.name} math={this.props.math.result} />
       </div>

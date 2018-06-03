@@ -5,13 +5,16 @@ export default class List extends React.Component {
   constructor() {
     super();
   } render() {
+    const removePersonByIndex = this.props.removePersonByIndex;
     return(
       <div>
         <ul class="gridContainer">
-          {this.props.listItems.map(function(listValue) {
+          {this.props.listItems.map(function(listValue, index) {
             return <ListItem item={listValue.name}
               image={listValue.img}
-              popItem={() => this.props.popItem()} />
+              removePersonByIndex={removePersonByIndex}
+              index={index}
+              />
           })}
         </ul>
       </div>
