@@ -22,15 +22,26 @@ class App extends Component {
           <div class="buttonMenu">
             <Button buttonText="+" buttonAction={() => this.props.addOne()} />
             <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
-            <Button buttonText="JoNe" buttonAction={() => this.props.changeName("Johannes")} />
-            <Button buttonText="add Alba" buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} />
-            <Button buttonText="pop" buttonAction={() => this.props.removePerson()} />
-            <NameForm img={avatar} submitAction={(person) => this.props.addPersonToList(person)}/>
+            <Button
+              buttonText="JoNe"
+              buttonAction={() => this.props.changeName("Johannes")} />
+            <Button
+              buttonText="add Alba"
+              buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} />
+            <Button
+              buttonText="pop"
+              buttonAction={() => this.props.removePerson()} />
+            <NameForm
+              img={avatar}
+              submitAction={(person) => this.props.addPersonToList(person)}/>
           </div>
           <div class="cardArea">
-            <List listItems={this.props.person.personList} removePersonByIndex={this.props.removePersonByIndex} />
+            <List
+              listItems={this.props.person.personList} removePersonByIndex={this.props.removePersonByIndex} />
           </div>
-        <Footer name={this.props.name.name} math={this.props.math.result} />
+        <Footer
+          name={this.props.name.name}
+          math={this.props.math.result} />
       </div>
     );
   }
