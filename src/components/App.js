@@ -37,7 +37,7 @@ class App extends Component {
           </div>
           <div class="cardArea">
             <List
-              listItems={this.props.person.personList} removePersonByIndex={this.props.removePersonByIndex} />
+              listItems={this.props.person.personList} removePersonByIndex={this.props.removePersonByIndex} duplicatePersonByIndex={this.props.duplicatePersonByIndex}/>
           </div>
         <Footer
           name={this.props.name.name}
@@ -62,7 +62,8 @@ const mapDispatchToProps = (dispatch) => {
     subtractOne: () => {dispatch(mathAction.subtractOne())},
     addPersonToList: (person) => {dispatch(personActions.addPerson(person))},
     removePerson: () => {dispatch(personActions.removePerson())},
-    removePersonByIndex: (index) => {dispatch(personActions.removePersonByIndex(index))}
+    removePersonByIndex: (index) => {dispatch(personActions.removePersonByIndex(index))},
+    duplicatePersonByIndex: (index) => {dispatch(personActions.duplicatePersonByIndex(index))}
   }
 };
 

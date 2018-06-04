@@ -15,7 +15,12 @@ export default class ListItem extends React.Component {
             buttonAction={this.props.removePersonByIndex}
             index={this.props.index}
           />
-          </div>
+           <Button
+            buttonText="dp"
+            buttonAction={this.props.duplicatePersonByIndex}
+            index={this.props.index}
+          />
+            </div>
       </div>
       </li>
     )

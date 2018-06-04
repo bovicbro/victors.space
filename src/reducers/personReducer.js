@@ -27,8 +27,15 @@ const personReducer = (state = {
       ...state,
       personList: state.personList,
     }
-      break;
+    break;
 
+    case "DUPLICATE_PERSON_BY_INDEX":
+    state.personList.splice(action.payload,0,state.personList[action.payload])
+    state ={
+      ...state,
+      personList: state.personList,
+    }
+      break;
 
     default:
     break;

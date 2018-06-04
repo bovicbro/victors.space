@@ -24,6 +24,12 @@ const personActions = {
       type: "REMOVE_PERSON_BY_INDEX",
       payload: index
     };
+  },
+  duplicatePersonByIndex: (index) => {
+    return {
+      type: "DUPLICATE_PERSON_BY_INDEX",
+      payload: index
+    }
   }
 
 }

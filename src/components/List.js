@@ -6,6 +6,7 @@ export default class List extends React.Component {
     super();
   } render() {
     const removePersonByIndex = this.props.removePersonByIndex;
+    const duplicatePersonByIndex = this.props.duplicatePersonByIndex;
     return(
       <div>
         <ul class="gridContainer">
@@ -13,6 +14,7 @@ export default class List extends React.Component {
             return <ListItem item={listValue.name}
               image={listValue.img}
               removePersonByIndex={removePersonByIndex}
+              duplicatePersonByIndex={duplicatePersonByIndex}
               index={index}
               />
           })}
