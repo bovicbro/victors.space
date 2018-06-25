@@ -1,18 +1,15 @@
-.App {
+body {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+.header {
+  background-color: #252525;
+  height: 100px;
   padding: 20px;
-  color: white;
+  color: #656565;
+  grid-column: 1 / 3;
+  text-align: center;
+  border-radius: 2px;
 }
 
 .App-title {
@@ -23,25 +20,15 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.14s;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
-}
-
-.header {
-  background:#E8A724;
-  padding: 10px;
-  grid-column: 1 / 3;
 }
 
 .inputs {
@@ -50,19 +37,13 @@
 }
 
 .footer {
+  background-color: #252525;
+  border-radius: 2px;
+  height: 100px;
+  color: #656565;
+  padding: 20px;
   grid-column: 1/3;
   text-align: center;
-  letter-spacing: 5px;
-  background:#FF801B;
-  padding: 10px;
-}
-@media only screen and (max-width: 525px){
-
-.buttonMenu {
-  grid-column: 1 / 3;
-  text-align: center;
-}
-
 }
 .gridContainer{
   display: grid;
@@ -88,4 +69,26 @@ img {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 3fr;
+  height: 100%;
+}
+
+@media only screen and (max-width: 525px){
+
+  .buttonMenu {
+    grid-column: 1 / 3;
+    text-align: center;
+  }
+
+  li {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .mainContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
 }

@@ -10,15 +10,17 @@ export default class ListItem extends React.Component {
         <div class="card">
           <img src={this.props.image}></img>
           <div class="cardContainer">
-          {this.props.item} <Button
-            buttonText="rm"
-            buttonAction={this.props.removePersonByIndex}
-            index={this.props.index}
-          />
+          {this.props.item}
            <Button
             buttonText="dp"
             buttonAction={this.props.duplicatePersonByIndex}
             index={this.props.index}
+          />
+          <Button
+            buttonText="rm"
+            buttonAction={this.props.removePersonByIndex}
+            index={this.props.index}
+            type="warning"
           />
             </div>
       </div>

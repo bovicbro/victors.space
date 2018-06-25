@@ -9,8 +9,9 @@ onClick = () => {
   render() {
     return (
       <div>
-        <button onClick={this.onClick}>{this.props.buttonText}</button>
+        <button class={this.props.type} onClick={this.onClick}>{this.props.buttonText}</button>
       </div>
     );
   }
+
 }
