@@ -11,25 +11,37 @@ ul {
 
 li {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  margin: 10px;
+  margin: 5px;
   width: 200px;
 }
 
-button {
+button, input[type="submit"]{
       background-color: #e7e7e7;
       border: none;
       color: black;
-      padding: 14px;
+      padding: 10px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 16px;
+      font-size: 13px;
       margin: 5px;
       transition: 0.2s;
       border-radius: 2px;
 }
 
-.warning {
+.name {
+  width: 100%;
+}
+
+button[class="update"] {
+  background-color: ;
+}
+
+button:hover[class="update"] {
+  background-color: green;
+}
+
+button[class="warning"] {
   background-color: orange;
 }
 
@@ -37,7 +49,7 @@ button:hover[class="warning"] {
   background-color: red;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
   background-color: #555555;
   color: white;
 }

@@ -20,20 +20,22 @@ class App extends Component {
       <div class="mainContainer">
         <Header title="Plebbook" />
           <div class="buttonMenu">
-            <Button buttonText="+" buttonAction={() => this.props.addOne()} />
-            <Button buttonText="-" buttonAction={() => this.props.subtractOne()} />
-            <Button
+            <ul>
+            <li><Button buttonText="+" buttonAction={() => this.props.addOne()} /></li>
+            <li><Button buttonText="-" buttonAction={() => this.props.subtractOne()} /></li>
+            <li><Button
               buttonText="JoNe"
-              buttonAction={() => this.props.changeName("Johannes")} />
-            <Button
+              buttonAction={() => this.props.changeName("Johannes")} /></li>
+            <li><Button
               buttonText="add Alba"
-              buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} />
-            <Button
+              buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} /></li>
+            <li><Button
               buttonText="pop"
-              buttonAction={() => this.props.removePerson()} />
-            <NameForm
+              buttonAction={() => this.props.removePerson()} /></li>
+            <li><NameForm
               img={avatar}
-              submitAction={(person) => this.props.addPersonToList(person)}/>
+              submitAction={(person) => this.props.addPersonToList(person)}/></li>
+            </ul>
           </div>
           <div class="cardArea">
             <List

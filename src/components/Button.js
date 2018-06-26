@@ -8,9 +8,7 @@ onClick = () => {
 
   render() {
     return (
-      <div>
         <button class={this.props.type} onClick={this.onClick}>{this.props.buttonText}</button>
-      </div>
     );
   }
 

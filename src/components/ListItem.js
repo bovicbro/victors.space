@@ -8,21 +8,29 @@ export default class ListItem extends React.Component {
     return(
       <li>
         <div class="card">
-          <img src={this.props.image}></img>
+            <img src={this.props.image}></img>
           <div class="cardContainer">
+          <div class="name">
           {this.props.item}
+          </div>
            <Button
-            buttonText="dp"
+            buttonText="Duplicate"
             buttonAction={this.props.duplicatePersonByIndex}
             index={this.props.index}
           />
           <Button
-            buttonText="rm"
+            buttonText="Remove"
             buttonAction={this.props.removePersonByIndex}
             index={this.props.index}
             type="warning"
           />
-            </div>
+          <Button
+            buttonText="Update"
+            buttonAction={this.props.removePersonByIndex}
+            index={this.props.index}
+            type="update"
+          />
+        </div>
       </div>
       </li>
     )
