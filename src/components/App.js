@@ -11,7 +11,7 @@ import personActions from "../actions/personActions"
 import mathAction from "../actions/mathAction"
 
 const avatar = require('../img_avatar.png')
-const boat = require('../boat.jpg')
+const boat = require('../statis/img/boat.jpg')
 
 
 class App extends Component {
