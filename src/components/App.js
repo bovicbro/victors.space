@@ -11,7 +11,7 @@ import personActions from "../actions/personActions"
 import mathAction from "../actions/mathAction"
 
 const avatar = require('../img_avatar.png')
-const alba = require('../alba.jpg')
+const boat = require('../boat.jpg')
 
 
 class App extends Component {
@@ -27,8 +27,8 @@ class App extends Component {
               buttonText="JoNe"
               buttonAction={() => this.props.changeName("Johannes")} /></li>
             <li><Button
-              buttonText="add Alba"
-              buttonAction={()=> this.props.addPersonToList({name:"Jessica Alba", img: alba})} /></li>
+              buttonText="add boat"
+              buttonAction={()=> this.props.addPersonToList({name:"Boat", img: boat})} /></li>
             <li><Button
               buttonText="pop"
               buttonAction={() => this.props.removePerson()} /></li>
